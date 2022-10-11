@@ -1,0 +1,41 @@
+Source: libsql-statement-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Ansgar Burchardt <ansgar@debian.org>,
+           Xavier Guimard <yadd@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: libclone-perl <!nocheck>,
+                     libdbi-perl <!nocheck>,
+                     libmath-base-convert-perl <!nocheck>,
+                     libmodule-runtime-perl <!nocheck>,
+                     libparams-util-perl <!nocheck>,
+                     libtest-deep-perl <!nocheck>,
+                     libtest-pod-coverage-perl <!nocheck>,
+                     libtest-pod-perl <!nocheck>,
+                     libtext-soundex-perl <!nocheck>,
+                     perl
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libsql-statement-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libsql-statement-perl.git
+Homepage: https://metacpan.org/release/SQL-Statement
+Rules-Requires-Root: no
+
+Package: libsql-statement-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libclone-perl,
+         libmodule-runtime-perl,
+         libparams-util-perl
+Recommends: libdbi-perl,
+            libmath-base-convert-perl,
+            libtext-soundex-perl
+Description: module for parsing and processing SQL statements
+ SQL::Statement is a Perl module that implements a small, abstract SQL engine.
+ This module is not useful itself, but as a base class for deriving concrete
+ SQL engines. The implementation is designed to work fine with the DBI driver
+ DBD::CSV, thus probably not so well suited for a larger environment, but I'd
+ hope it is extendable without too much problems.

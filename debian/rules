@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+
+PACKAGE = $(shell dh_listpackages)
+TMP     = $(CURDIR)/debian/$(PACKAGE)
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	# libdbd-csv-perl pulls in the older version of libsql-statement-perl
+	# not in Build-Depends-Indep anymore, but might be installed locally
+	SQL_STATEMENT_WARN_UPDATE=sure dh_auto_configure
+
+override_dh_auto_install:
+	dh_auto_install
+	# Remove files not part of the public interface, which are also
+	# missing any whatis entries
+	rm $(TMP)/usr/share/man/man3/SQL::Dialects::AnyData.3pm
+	rm $(TMP)/usr/share/man/man3/SQL::Dialects::ANSI.3pm
+	rm $(TMP)/usr/share/man/man3/SQL::Dialects::CSV.3pm
+	rm $(TMP)/usr/share/man/man3/SQL::Statement::GetInfo.3pm
+	rm $(TMP)/usr/share/man/man3/SQL::Statement::RAM.3pm
+	rm $(TMP)/usr/share/man/man3/SQL::Statement::Util.3pm

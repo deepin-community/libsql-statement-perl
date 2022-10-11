@@ -1,0 +1,69 @@
+libsql-statement-perl (1.28-1) unstable; urgency=low
+
+  From Changes:
+
+  [Things that may break your code]
+  * SQL::Statement 1.28 is expected not to work proper in combination with
+    DBI 1.611 and below
+  * SQL::Statement::ColumnValue expects now every table being derived from
+    SQL::Eval::Table
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Sun, 18 Jul 2010 22:49:43 +0900
+
+libsql-statement-perl (1.25-1) unstable; urgency=low
+
+  From Changes:
+
+  [Things that may break your code]
+  * SQL::Parser now didn't deliver a struct containing 'column_names',
+    'computed_columns' and 'set_functions' - it's combined into one
+     member 'column_defs'.
+  * Minimum required perl version is now 5.8 - upcoming next version
+    of DBI requires perl 5.8, too - and I could simplify some code
+    that's why
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Thu, 18 Mar 2010 22:19:35 -0400
+
+libsql-statement-perl (1.23-1) unstable; urgency=low
+
+  From Changes:
+
+  [Things that may break your code]
+  * row_value now expects up to two arguments
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 30 Nov 2009 23:08:25 +0100
+
+libsql-statement-perl (1.22-1) unstable; urgency=low
+
+  Excerpts from the upstream Changes file indication possible problems:
+
+  Version 1.21_3, release September 17th, 2009
+  ----------------------------------------------
+
+  [Things that may break your code]
+  * When someone accesses the where_clause attribute of the SQL::Statement
+    instance - be aware that now IN and BETWEEN can be native entries
+
+  [Improvements]
+  * IN and BETWEEN are now native operations - they are not expanded
+    to OR'ed equalize operations anymore
+
+  Version 1.21_2, release September 15th, 2009
+  ----------------------------------------------
+
+  [Things that may break your code]
+  * modify behavior for unquoted identifiers - they're converted and
+    returned lower cased now (instead upper cased as in 1.21_1)
+    Fixes bug RT #48502
+
+  Version 1.21_1, release July 30th, 2009
+  ------------------------------------------
+
+  [Things that may break your code]
+  * removed SQL::Statement::Column
+  * don't instantiate SQL::Statement::Functions objects
+  * Reworked internal column and function handling to reduce code complexity
+  * rows and columns aren't setable from outside a table or eval object
+    anymore
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 16 Oct 2009 14:50:19 +0200

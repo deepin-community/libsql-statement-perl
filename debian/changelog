@@ -1,0 +1,450 @@
+libsql-statement-perl (1.414-1) unstable; urgency=medium
+
+  [ Damyan Ivanov ]
+  * declare conformance with Policy 4.1.3 (no changes needed)
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Xavier Guimard ]
+  * Email change: Xavier Guimard -> yadd@debian.org
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+  * Import upstream version 1.414.
+  * Update years of upstream and packaging copyright.
+  * Declare compliance with Debian Policy 4.5.0.
+  * Set Rules-Requires-Root: no.
+  * Drop unneeded alternative build dependencies.
+  * Annotate test-only build dependencies with <!nocheck>.
+  * Bump debhelper-compat to 13.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 24 Oct 2020 00:53:39 +0200
+
+libsql-statement-perl (1.412-1) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * debian/upstream/metadata: change GitHub/CPAN URL(s) to HTTPS.
+  * Remove Jonathan Yu from Uploaders. Thanks for your work!
+  * Remove Nathan Handler from Uploaders. Thanks for your work!
+  * Remove Rene Mayorga from Uploaders. Thanks for your work!
+  * Remove Ryan Niebur from Uploaders. Thanks for your work!
+
+  [ Alex Muntada ]
+  * Remove inactive pkg-perl members from Uploaders.
+
+  [ Xavier Guimard ]
+  * New upstream release
+  * Declare compliance with Debian Policy 4.1.1
+  * Update libtext-soundex-perl dependency
+  * Remove Breaks for libdbd-anydata-perl, libdbd-csv-perl, and libdbi-perl
+  * Remove spelling errors patch
+  * Update debian/copyright years
+
+ -- Xavier Guimard <x.guimard@free.fr>  Wed, 25 Oct 2017 23:04:27 +0200
+
+libsql-statement-perl (1.410-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ Xavier Guimard ]
+  * Remove unnecessary versioned dependency to libdbi-perl
+
+  [ gregor herrmann ]
+  * Import upstream version 1.410
+  * Update years of upstream and packaging copyright.
+  * Add a patch to fix a spelling mistake in the POD.
+  * Declare compliance with Debian Policy 3.9.8.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 06 May 2016 20:53:40 +0200
+
+libsql-statement-perl (1.407-1) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ Xavier Guimard ]
+  * New upstream version
+  * Bump debhelper compatibility to 9
+  * Update debian/copyright years
+
+  [ gregor herrmann ]
+  * Add debian/upstream/metadata.
+  * Add new (build) dependencies.
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 3.9.6.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 22 Oct 2015 19:31:41 +0200
+
+libsql-statement-perl (1.405-1) unstable; urgency=low
+
+  [ Xavier Guimard ]
+  * Imported Upstream version 1.405
+
+  [ gregor herrmann ]
+  * debian/control: for dual-lifed module, use version constraint as proposed
+    in #711674.
+
+ -- Xavier Guimard <x.guimard@free.fr>  Fri, 21 Jun 2013 06:27:18 +0200
+
+libsql-statement-perl (1.404-1) unstable; urgency=low
+
+  * Imported Upstream version 1.404
+  * Remove spelling-errors.patch now included in upstream
+  * Add "libtext-soundex-perl | perl (<< 5.18~)" in recommended dependencies
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 01 Jun 2013 07:47:10 +0200
+
+libsql-statement-perl (1.402-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Nathan Handler ]
+  * Email change: Nathan Handler -> nhandler@debian.org
+
+  [ Salvatore Bonaccorso ]
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Xavier Guimard ]
+  * Imported Upstream version 1.402
+  * Update debian/copyright (years and format)
+  * Add spelling error patch
+  * Bump Standards-Version to 3.9.4
+  * Bump debhelper compatibility to 8
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 27 Apr 2013 07:29:01 +0200
+
+libsql-statement-perl (1.33-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump build-dep, recommend on libdbi-perl to >= 1.616.
+  * Update my email address.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Sun, 13 Feb 2011 10:23:48 +0100
+
+libsql-statement-perl (1.31-1) unstable; urgency=low
+
+  [ Nathan Handler ]
+  * New upstream release
+  * debian/control:
+    - Add myself to list of Uploaders
+
+  [ gregor herrmann ]
+  * debian/copyright: update license stanzas and list of copyright holders for
+    debian/*.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 02 Oct 2010 17:47:29 +0200
+
+libsql-statement-perl (1.30-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright: Refer to /usr/share/common-licenses/GPL-1.
+  * Bump Standards-Version to 3.9.1.
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Tue, 03 Aug 2010 13:10:22 +0900
+
+libsql-statement-perl (1.28-1) unstable; urgency=low
+
+  * New upstream release.
+    + Might break older code, see NEWS.Debian or upstream changelog for
+      details.
+  * No longer install Todo (removed upstream).
+  * Bump build-dep, recommends on libdbi-perl to >= 1.612.
+  * Bump build-dep on libtest-simple-perl to >= 0.90.
+  * Remove build-dep on libdbd-csv-perl to avoid a cyclic build-dep on this
+    package.
+  * Breaks libdbd-anydata-perl (<< 0.09+), libdbd-csv-perl (<< 0.3000),
+    libdbi-perl (<< 1.612).
+  * Bump Standards-Version to 3.9.0 (no changes).
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Sun, 18 Jul 2010 23:00:49 +0900
+
+libsql-statement-perl (1.27-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Remove POD spelling patch, applied upstream
+
+  [ gregor herrmann ]
+  * debian/rules: replace override_dh_installman with
+    override_dh_auto_install, the upstream manpages are installed by the build
+    system and not by dh_installman.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Thu, 06 May 2010 19:18:38 -0400
+
+libsql-statement-perl (1.26-1) unstable; urgency=low
+
+  * New upstream release.
+  * No longer install README.
+  * Add myself to Uploaders.
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Sun, 11 Apr 2010 12:20:15 +0900
+
+libsql-statement-perl (1.25-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Standards-Version 3.8.4 (no changes)
+  * Update copyright to new DEP5 format
+    + Update copyright per upstream
+    + Update debian/ copyright holders from changelog
+  * Use new 3.0 (quilt) source format
+  * Add a patch to fix POD spelling errors
+
+  [ gregor herrmann ]
+  * Remove README.Debian that talked about an upgrade over 5 years ago.
+  * debian/control: add build dependency on Test::Simple 0.86.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Thu, 18 Mar 2010 22:19:31 -0400
+
+libsql-statement-perl (1.23-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Remove manpages with missing whatis entries; these are part of a
+    private interface not meant to be used directly anyway
+  * Add Test::Pod{,::Coverage} to B-D-I for build
+
+  [ gregor herrmann ]
+  * Add "Things that may break your code" note from upstream Changes to
+    debian/NEWS.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Thu, 26 Nov 2009 18:43:07 -0500
+
+libsql-statement-perl (1.22-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+  * debian/control: Added: ${misc:Depends} to Depends: field.
+
+  [ Rene Mayorga ]
+  * New upstream release
+  * debian/control:
+    + wrap long lines
+    + add myself to uploaders
+    + add libdbd-csv-perl to B-D-I
+  * debian/rules; updated using dh-make-perl
+  * debhelper and debian/compat set to 7
+  * libsql-statement-perl.doc; keep README
+  * debian/copyright:
+    + use (new)format
+    + add copyright years to upstream
+    + add upstream's missing copyright statement
+    + split copyright stanzas for debian/*
+
+  [ Ryan Niebur ]
+  * New upstream release
+  * Add myself to uploaders
+  * Add libclone-perl and libparams-util-perl to B-D-I and Depends
+  * Update ryan52's email address
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ gregor herrmann ]
+  * Change my email address.
+  * New upstream release 1.22.
+    + update dependencies
+    + closes: #531238, #317518
+    + remove patch and quilt framework, RT#13080 (Debian bug #311788) is
+      resolved
+    + update and compact copyright
+  * Minimize debian/rules, adjust build deps.
+  * Set Standards-Version to 3.8.3; remove version from perl dependency.
+  * Rename debian/README.update.Debian to debian/README.Debian, add
+    debian/NEWS about possible problems, install upstream Todo.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 19 Oct 2009 18:12:55 +0200
+
+libsql-statement-perl (1.15-3) unstable; urgency=low
+
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Removed: XS-
+    Vcs-Svn fields; build-dependency on perl-doc.
+  * debian/rules:
+    - delete /usr/lib/perl5 only if it exists (closes: #467965)
+    - minor updates inspired by dh-make-perl's templates
+  * Add debian/compat.
+  * debian/watch: use dist-based URL.
+  * debian/copyright: add upstream source location; update years of
+    copyright.
+  * Set Standards-Version to 3.7.3 (no changes).
+  * Split patch for #311788 out; add quilt framework.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Wed, 05 Mar 2008 19:45:51 +0100
+
+libsql-statement-perl (1.15-2) unstable; urgency=low
+
+  * Use $(CURDIR) [make] instead of $(PWD) [sh] to fix issues with sudo.
+  * Set Standards-Version to 3.7.2 (no changes).
+  * Remove empty /usr/lib/perl5 directory.
+  * Add libdbd-xbase-perl to Build-Depends-Indep.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Sun,  1 Oct 2006 14:53:14 +0200
+
+libsql-statement-perl (1.15-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control:
+   - debhelper moved to Build-Depends with increased version to (>= 5.0.0)
+   - added me to Uploaders
+   - added libdbi-perl to Build-Depends-Indeep & Recommends
+  * debian/watch - updated
+
+ -- Krzysztof Krzyzaniak (eloy) <eloy@debian.org>  Thu,  2 Mar 2006 13:36:39 +0100
+
+libsql-statement-perl (1.14-2) unstable; urgency=low
+
+  * Added patch by Niko Tyni allowing for field updates based on its
+    previous values (Closes: #311788)
+  * No longer ignores failure of the clean target
+  * Performs the tests as part of the build process
+
+ -- Gunnar Wolf <gwolf@debian.org>  Mon,  2 Jan 2006 11:43:30 -0600
+
+libsql-statement-perl (1.14-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Wed,  4 May 2005 08:27:10 -0500
+
+libsql-statement-perl (1.13-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Fri, 22 Apr 2005 19:47:18 -0500
+
+libsql-statement-perl (1.11-1) unstable; urgency=low
+
+  *  New upstream release
+  * Fixed: Now has a debian/watch file
+  * Fixed: POD formatting confused lexgrog
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue,  5 Apr 2005 17:54:52 -0500
+
+libsql-statement-perl (1.09-1) unstable; urgency=low
+
+  * New upstream release (Closes: #165723, #178052)
+  * New maintainer - Debian Perl Group <pkg-perl-
+    maintainers@lists.alioth.debian.org> via Gunnar Wolf
+    <gwolf@debian.org> (Closes: #279802)
+  * Bumped up standards-version to 3.6.1
+  * New version is a pure-perl version, bison/yylex no longer used.
+    Please read /usr/share/doc/libsql-statement-perl/README.update.Debian
+    on any possible problems regarding older versions. (Closes: #166549,
+    #167060, #162167)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Mon,  8 Nov 2004 20:53:48 -0600
+
+libsql-statement-perl (0.1021-1.3) unstable; urgency=low
+
+  * NMU: yet another bison fix.  Thanks to Nick Leverton for the patch.
+    (Closes: #162167)
+
+ -- Jaldhar H. Vyas <jaldhar@debian.org>  Thu, 29 Jul 2004 00:29:18 -0400
+
+libsql-statement-perl (0.1021-1.2) unstable; urgency=low
+
+  * Non-Maintainer Upload (BSP 2002-11).
+  * Fixed bison code (closes: bug#166549, bug#167060).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Sat, 23 Nov 2002 19:19:36 +0100
+
+libsql-statement-perl (0.1021-1.1) unstable; urgency=low
+
+  * NMU
+  * Build against perl 5.8.0.
+
+ -- Brendan O'Dea <bod@debian.org>  Tue, 27 Aug 2002 20:55:43 +1000
+
+libsql-statement-perl (0.1021-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix bug due to change in bison management of YYDEBUG manifest constant,
+  Closes: #140132
+
+ -- Stephen Zander <gibreel@debian.org>  Fri, 16 Aug 2002 15:24:36 -0700
+
+libsql-statement-perl (0.1020-2) unstable; urgency=medium
+
+  * Add missing dependencies, Closes: #99014
+
+ -- Stephen Zander <gibreel@debian.org>  Fri,  1 Jun 2001 14:02:55 -0700
+
+libsql-statement-perl (0.1020-1) unstable; urgency=low
+
+  * New upstream release.
+  * New maintainer, Closes: #80294
+  * Updated for policy 3.5.1 and the new perl packaging policy, Closes: #80716
+  * Get maintainer entry in control file correct (and close bugs rather
+    than just fixing them)
+  * Check permissions on README, Closes: #99014
+
+ -- Stephen Zander <gibreel@debian.org>  Mon, 28 May 2001 15:59:37 -0700
+
+libsql-statement-perl (0.1018-1) unstable; urgency=low
+
+  * New upstream release
+  * New maintainer, Closes: #80294
+  * Updated for policy 3.5.1 and the new perl packaging policy, Closes: #80716
+
+ -- Stephen Zander <gibreel@debian.org>  Wed, 25 Apr 2001 01:05:30 -0700
+
+libsql-statement-perl (0.1016-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Sat, 16 Oct 1999 17:47:53 +0200
+
+libsql-statement-perl (0.1015-2) unstable; urgency=low
+
+  * New recompilation
+
+ -- Piotr Roszatycki <dexter@debian.org>  Fri, 15 Oct 1999 22:46:04 +0200
+
+libsql-statement-perl (0.1015-1) unstable; urgency=low
+
+  * Extended copyright info
+  * Standards-Version: 3.0.1
+  * New upstream release
+
+ -- Piotr Roszatycki <dexter@debian.org>  Mon, 23 Aug 1999 16:06:45 +0200
+
+libsql-statement-perl (0.1012-2) unstable; urgency=low
+
+  * Fixed lintian error (spelling-error-in-description usefull useful)
+  * yada script upstream (0.6) and mixed with debhelper 2.0
+  * New perl policy (1.0)
+
+ -- Piotr Roszatycki <dexter@debian.org>  Tue,  6 Jul 1999 15:37:06 +0200
+
+libsql-statement-perl (0.1012-1) unstable; urgency=low
+
+  * yada technology.
+  * New upstream release.
+  * New maintainer release.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Sat, 22 May 1999 21:26:27 +0200
+
+libsql-statement-perl (0.1007-2) unstable; urgency=low
+
+  * fixed hard-code i386 architecture bug
+  * got rid of obsolescent dh_du
+
+ -- Craig Sanders <cas@taz.net.au>  Fri, 16 Oct 1998 20:23:00 +1000
+
+libsql-statement-perl (0.1007-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Craig Sanders <cas@taz.net.au>  Wed, 30 Sep 1998 08:38:41 +1000
